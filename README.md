@@ -1,10 +1,3 @@
-❗❗❗ **This role is not maintained anymore** ❗❗❗
-
-[archived] kibatic.traefik
-=========
-
-❗❗❗ **This role is not maintained anymore** ❗❗❗
-
 Ansible role to deploy traefik binary and systemd unit.
 
 [![Build Status](https://travis-ci.org/kibatic/ansible-traefik.svg?branch=master)](https://travis-ci.org/kibatic/ansible-traefik)
@@ -14,17 +7,17 @@ Træfɪk is a modern HTTP reverse proxy and load balancer made to deploy microse
 Installation
 --------------
 
-`$ ansible-galaxy install kibatic.traefik`
+`$ ansible-galaxy install nanopish.traefik`
 
 Role Variables
 --------------
 
 ```yml
 traefik_install_dir: /usr/bin
-traefik_binary_url: https://github.com/containous/traefik/releases/download/v1.7.5/traefik_linux-amd64
+traefik_binary_url: https://github.com/traefik/traefik/releases/download/v2.9.10/traefik_v2.9.10_linux_amd64.tar.gz
 traefik_bin_path: "{{ traefik_install_dir }}/traefik"
-traefik_config_file: /etc/traefik.toml
-traefik_template: traefik.toml
+traefik_config_file: /etc/traefik.yml
+traefik_template: traefik.yml
 traefik_systemd_unit_template: traefik.service
 traefik_systemd_unit_dest: /etc/systemd/system/traefik.service
 ```
