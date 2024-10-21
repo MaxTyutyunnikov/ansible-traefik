@@ -13,7 +13,7 @@ Documentation=https://doc.traefik.io/traefik/
 
 # configure service behavior
 Type=notify
-ExecStart={{ traefik_bin_path }} --configFile={{ traefik_config_file }}
+ExecStart={{ traefik_bin_path }} --configFile={{ traefik_config_file }} {{ traefik_systemd_options|d([]) | join(" ") }}
 Restart=always
 WatchdogSec=1s
 
